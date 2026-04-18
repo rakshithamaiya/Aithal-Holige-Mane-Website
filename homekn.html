@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <title>ಅೈತಾಳ ಹೊಳಿಗೆ ಮನೆ</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+
+      .page-section {
+  position: relative;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
+
+.page-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+.section-heading {
+  position: relative;
+  padding-top: 30px;
+}
+
+.section-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-height: 90vh;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(0.7); 
+  transition: transform 0.5s ease;
+}
+
+.hero-text {
+  z-index: 5; 
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  padding: 0 15px;
+}
+
+.hero-text h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.hamburger-menu button {
+  font-size: 1.5rem;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+}
+
+.hamburger-menu button:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.hamburger-menu .dropdown-item {
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.hamburger-menu .dropdown-item:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+
+.full-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;   
+  justify-content: center;
+  background-color: #ffffff; 
+}
+
+.hours-box {
+    background-color:rgba(255, 217, 0, 0.779);
+  color: black;
+
+  padding: 60px 80px;      
+  border-radius: 16px;
+
+  max-width: 500px;       
+  width: 100%;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+
+.section-box {
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.holige-title {
+  font-weight: 800;
+  letter-spacing: 2px;
+  color:#000;
+}
+
+.holige-img {
+  border-radius: 16px;
+  height: 360px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.holige-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.holige-btn {
+  background-color: rgba(255,255,0.4);
+  color: #111;
+  border-radius: 999px; 
+  padding: 10px 24px;
+  font-weight: 500;
+  border: none;
+  text-decoration: none;
+}
+
+.holige-btn:hover {
+  background-color:rgba(255, 217, 0, 0.779);
+  color: #000;
+}
+
+.menu-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.menu-subtitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #b24c2a;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.divider-line {
+  width: 80px;
+  height: 3px;
+  background-color:black;
+  margin: 0 auto 15px;
+}
+
+.menu-table {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.menu-table thead {
+  background-color: #b24c2a;
+  color: #fff;
+}
+
+.menu-table th,
+.menu-table td {
+  padding: 14px;
+  font-size: 16px;
+}
+
+.menu-table tbody tr {
+  border-bottom: 1px solid #f0e0d6;
+}
+
+.menu-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.menu-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.row.mb-5 {
+  margin-bottom: 60px !important;
+}
+
+@media (max-width: 768px) {
+  .menu-title {
+    font-size: 32px;
+  }
+
+  .menu-subtitle {
+    font-size: 16px;
+  }
+
+  .menu-section {
+    padding: 40px 15px;
+  }
+}
+
+
+.about-gallery-box {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.about-gallery-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-gallery-box:hover .about-gallery-img {
+  transform: scale(1.07);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.image-box {
+  height: 180px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.menu-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.menu-img:hover {
+  transform: scale(1.05);
+}
+
+.description-box {
+  padding: 15px;
+}
+
+.description-box {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  line-height: 1.7;
+}
+
+.description-box p:first-child {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.quote-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  font-style: italic;
+  position: relative;
+}
+
+.quote-card::before {
+  content: "“";
+  font-size: 60px;
+  color: #b24c2a;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+.quote-card p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .image-box {
+    height: 150px;
+  }
+}
+
+.content-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #b24c2a;
+  margin-bottom: 15px;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 700px;      
+  margin: 0 auto;        
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+ 
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 220px;        
+  border: 0;
+  display: block;
+    height: 180px;
+}
+
+
+
+
+footer {
+  position: relative;
+  background-image: url("images/footer.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;            
+  display: flex;                  
+  flex-direction: column;         
+  justify-content: space-between; 
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+footer * {
+  position: relative;
+  z-index: 2;
+}
+
+footer .container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 30px;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  background-color: #e6ddd5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #777;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: #e2d3c7;
+  margin: 40px 0;
+}
+
+.social-icons i {
+  font-size: 24px;
+  color: #f8e8c8;   
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: #f1d27a;   
+  transform: scale(1.2);
+}
+
+</style>
+</head>
+<body>
+<div id="heroCarousel" class="carousel slide carousel-fade hero" data-bs-ride="carousel" data-bs-interval="3000">
+
+  
+<div class="position-absolute top-0 start-0 m-3" style="z-index: 5;">
+    <button class="btn btn-dark"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#heroMenu">
+      &#9776;
+    </button>
+
+    <div class="collapse mt-2" id="heroMenu">
+      <div class="card card-body bg-dark p-2">
+        <a class="dropdown-item text-white" href="#home">ಮುಖಪುಟ</a>
+    <a class="dropdown-item text-white" href="#about">ನಮ್ಮ ಬಗ್ಗೆ</a>
+    <a class="dropdown-item text-white" href="#menu">ಮೆನು</a>
+    <a class="dropdown-item text-white" href="#contact">ಸಂಪರ್ಕಿಸಿ</a>
+    <a class="dropdown-item text-white" href="#" data-bs-toggle="modal" data-bs-target="#adminLoginModal">ನಿರ್ವಾಹಕ</a>
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="position-absolute top-0 end-0 m-3" style="z-index: 5;">
+    <div class="dropdown">
+      <button class="btn btn-dark dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown">
+        🌐 Language
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="home.html">English</a></li>
+        <li><a class="dropdown-item" href="homekn.html">ಕನ್ನಡ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="carousel-inner h-100">
+    <div class="carousel-item active">
+      <img src="images/carone.jpeg" class="d-block w-100 hero-img">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/cartwo.jpeg" class="d-block w-100 hero-img">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/carthree.jpeg" class="d-block w-100 hero-img">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/carfour.jpeg" class="d-block w-100 hero-img">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/carfive.jpeg" class="d-block w-100 hero-img">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/carsix.jpeg" class="d-block w-100 hero-img">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/carseven.jpeg" class="d-block w-100 hero-img">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/careight.jpeg" class="d-block w-100 hero-img">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/carnine.jpeg" class="d-block w-100 hero-img">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/carten.jpeg" class="d-block w-100 hero-img">
+    </div>
+  </div>
+
+  <div class="hero-text position-absolute top-50 start-50 translate-middle text-center">
+   <h1 class="display-4">ಅೈತಾಳ ಹೊಳಿಗೆ ಮನೆ</h1>
+<p class="lead">ಸಿಹಿ • ಖಾರ • ಪ್ರೀತಿಯಿಂದ ತಯಾರಿಸಲಾಗಿದೆ</p>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+
+</div>
+
+
+
+
+<section class="hours full-page page-section">
+  <div class="hours-box text-center">
+
+    <div class="mb-3 fs-4">*</div>
+
+    <h3><u>ಕಾರ್ಯ ಸಮಯ</u></h3>
+<p><b>ಸೋಮವಾರದಿಂದ ಭಾನುವಾರವರೆಗೆ ತೆರೆದಿರುತ್ತದೆ</b></p>
+<p><b>ಬೆಳಿಗ್ಗೆ 9 ರಿಂದ ರಾತ್ರಿ 9 ರವರೆಗೆ</b></p>
+<p><i>ಹಬ್ಬದ ಸಮಯದಲ್ಲಿ ಹೆಚ್ಚು ಜನಸಂದಣಿ ಇರುತ್ತದೆ</i></p>
+
+    <div class="mt-3 fs-4">*</div>
+
+  </div>
+</section>
+
+<div class="section-box">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+     <h2 class="holige-title">ಪ್ರಸಿದ್ಧ ಹೊಳಿಗೆಗಳು</h2>
+<a href="#menu" class="btn holige-btn px-4">
+ಪೂರ್ಣ ಹೊಳಿಗೆ ಮೆನು ನೋಡಿ
+</a>
+
+    </div>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <img src="images/holige1.jpeg"
+           alt="Coconut Holige"
+           class="holige-img">
+    </div>
+
+    <div class="col-md-4">
+      <img src="images/holigetwoo.jpeg"
+           alt="Dal Holige"
+           class="holige-img">
+    </div>
+
+    <div class="col-md-4">
+      <img src="images/holigethree.jpeg"
+           alt="Kova Holige"
+           class="holige-img">
+    </div>
+  </div>
+
+</div>
+
+<div class="section-box">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+     <h2 class="holige-title">ಉಪಹಾರಗಳು</h2>
+<a href="#sweets-snacks" class="btn holige-btn px-4">
+ಪೂರ್ಣ ಮೆನು ನೋಡಿ
+</a>
+
+    </div>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <img src="images/famoustwo.jpeg"
+           alt="Karjikayi"
+           class="holige-img">
+    </div>
+
+    <div class="col-md-4">
+      <img src="images/famousonepointfive.jpeg"
+           alt="Dal Holige"
+           class="holige-img">
+    </div>
+
+    <div class="col-md-4">
+      <img src="images/famousthree.jpeg"
+           alt="Kova Holige"
+           class="holige-img">
+    </div>
+  </div>
+
+</div>
+
+<section class="menu-section page-section" id="menu">
+  <div class="container">
+    <div class="divider-line"></div>
+    <h1 class="menu-title">ಮೆನು</h1>
+
+    <br>
+    <h6 class="menu-subtitle"> ಹೊಳಿಗೆ</h6>
+
+   <div class="row align-items-start">
+
+  <div class="col-md-7">
+    <table class="table menu-table text-center">
+      <thead>
+  <tr>
+    <th>ಉತ್ಪನ್ನ  ಹೊಳಿಗೆಗಳು</th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr><td>ಬೆಳೆ ಹೊಳಿಗೆ (ದಾಳ್ ಹೊಳಿಗೆ)</td></tr>
+  <tr><td>ತೆಂಗಿನಕಾಯಿ ಹೊಳಿಗೆ</td></tr>
+  <tr><td>ಖೋವಾ ಹೊಳಿಗೆ</td></tr>
+  <tr><td>ಖರ್ಜೂರ ಹೊಳಿಗೆ</td></tr>
+  <tr><td>ಗಜ್ಜರಿ ಹೊಳಿಗೆ</td></tr>
+  <tr><td>ಅನಾನಸ್ ಹೊಳಿಗೆ</td></tr>
+  <tr><td>50 x 50 ಹೊಳಿಗೆ</td></tr>
+  <tr><td>ಬಾದಾಮಿ ಹೊಳಿಗೆ</td></tr>
+  <tr><td>ಗಸಗಸೆ ಹೊಳಿಗೆ</td></tr>
+
+  <tr>
+    <td>
+      <div class="dropdown">
+        <button class="btn btn-outline-dark dropdown-toggle w-100"
+                type="button"
+                data-bs-toggle="dropdown">
+          ಪೂರ್ವ ಆರ್ಡರ್ ಅಥವಾ ವಿಶೇಷ ಸಂದರ್ಭಗಳಲ್ಲಿ ಮಾತ್ರ ಲಭ್ಯ
+        </button>
+
+        <ul class="dropdown-menu w-100">
+          <li><a class="dropdown-item">ಹಲಸಿನ ಹಣ್ಣು ಹೊಳಿಗೆ</a></li>
+          <li><a class="dropdown-item">ಗುಲ್ಕನ್ ಹೊಳಿಗೆ</a></li>
+          <li><a class="dropdown-item">ಅಂಜೂರ ಹೊಳಿಗೆ</a></li>
+          <li><a class="dropdown-item">ಸಕ್ಕರೆ ತುಪ್ಪ ಹೊಳಿಗೆ</a></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+
+</tbody>
+
+    </table>
+
+<div class="menu-section mt-4">
+  <h4 class="text-center mb-3">ಪೇಣಿ & ಚಿರೋಟಿ</h4>
+
+  <table class="table table-bordered text-center">
+    <tbody>
+      <tr>
+        <td>ಪೇಣಿ</td>
+      </tr>
+      <tr>
+        <td>ಚಿರೋಟಿ</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+  <div class="col-md-5">
+    
+    <div class="image-box mb-3">
+      <img src="images/menuone.jpeg" class="menu-img">
+    </div>
+
+    <div class="image-box mb-3">
+      <img src="images/menuonepoint.jpeg" class="menu-img">
+    </div>
+
+    
+    <div class="image-box">
+      <img src="images/menuthree.jpeg" class="menu-img">
+    </div>
+
+
+    <br>
+    <div class="image-box">
+      <img src="images/menucc.jpeg" class="menu-img">
+    </div>
+<br>
+    <div class="image-box">
+      <img src="images/peni.jpeg" class="menu-img">
+    </div>
+
+  </div>
+
+</div>
+
+
+     
+</section>
+
+<section class="menu-section" id="sweets-snacks">
+  <div class="container">
+
+    <h6 class="menu-subtitle">ಮಿಠಾಯಿ & ತಿಂಡಿಗಳು</h6>
+
+
+    <div class="row align-items-start mb-5">
+
+      
+      <div class="col-md-5">
+        <div class="image-box mb-3">
+          <img src="images/menuuone.jpeg" class="menu-img">
+        </div>
+        <br><br>
+        <div class="image-box mb-3">
+          <img src="images/menuutwopointfive.jpeg" class="menu-img">
+        </div>
+        <br><br>
+        <div class="image-box">
+          <img src="images/menuuthree.jpeg" class="menu-img">
+        </div>
+        <br><br>
+        <div class="image-box">
+          <img src="images/dryfruits.jpeg" class="menu-img">
+        </div>
+        <br><br>
+        <div class="image-box">
+          <img src="images/menuh.jpeg" class="menu-img">
+        </div>
+      </div>
+
+      
+      <div class="col-md-7">
+
+        <div class="accordion" id="sweetsMenu">
+
+         
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#sweets">
+  ಮಿಠಾಯಿಗಳು
+</button>
+</h2>
+<div id="sweets" class="accordion-collapse collapse">
+  <div class="accordion-body" id="sweets-list">
+    ರಫ್ ಚಿಕ್ಕಿ, ನೈಸ್ ಚಿಕ್ಕಿ, ವಿವಿಧ ಆಕಾರದ ಚಿಕ್ಕಿಗಳು<br>
+    ಗೋಧಿ ಹಲ್ವಾ, ಬಾಳೆಹಣ್ಣು ಹಲ್ವಾ, ಡ್ರೈ ಫ್ರೂಟ್ಸ್ ಹಲ್ವಾ<br>
+    ಗೋಧಿ ಲಡ್ಡು, ಕಜ್ಜಾಯ<br>
+    ಡ್ರೈ ಜಾಮೂನ್, ಜೀರಾ ಜಾಮೂನ್<br>
+    ಕರ್ಜಿಕಾಯಿ (ಬೆಲ್ಲ / ಸಕ್ಕರೆ), ಮೋದಕ<br>
+    ಬಾದಾಮ್ ಪೂರಿ, ಬಾದುಷಾ<br>
+    ಬೆಸನ್ ಲಡ್ಡು, ಕಪ್ಪು & ಬಿಳಿ ಎಳ್ಳು ಉಂಡೆ<br>
+    ಡ್ರೈ ಫ್ರೂಟ್ಸ್ ಉಂಡೆ (ಉಂಟಿನ ಉಂಡೆ)<br>
+    ಸೋನ್ ರೋಲ್ಸ್, ರೋಸ್ ಕುಕೀಸ್<br>
+    ಕೊಬ್ರಿ ಬರ್ಫಿ (ಬೆಲ್ಲ / ಸಕ್ಕರೆ – ದೊಡ್ಡದು & ಚಿಕ್ಕದು)<br>
+    ಹಬ್ಬೆ / ಆವಿ ಕಡುಬು (ಸಿಹಿ / ಖಾರ)<br>
+    ಶಂಕರಪೋಳಿ (ಸಿಹಿ / ಖಾರ)<br>
+    ಹಲ್ಕೋವಾ, ಮೈಸೂರುಪಾಕ್ ಬಾಕ್ಸ್, ತುಪ್ಪ ಮೈಸೂರುಪಾಕ್ ಬಾಕ್ಸ್<br>
+    ಬೂಂದಿ ಲಡ್ಡು, ರವಾ ಲಡ್ಡು<br>
+    ಕಡಲೆಕಾಯಿ ಉಂಡೆ, ಸಜ್ಜಪ್ಪ, ತಂಬಿಟ್ಟು ಉಂಡೆ<br>
+    ಕಡಲೆಕಾಯಿ ಗೋಳಿ, ಪೂತ್ರೇಕಲು, ರಾಗಿ ಬಿಸ್ಕಟ್
+  </div>
+</div>
+</div>
+
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+             <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#khara">
+  ಖಾರ ಪದಾರ್ಥಗಳು
+</button>
+</h2>
+<div id="khara" class="accordion-collapse collapse">
+  <div class="accordion-body" id="khara-list">
+    ಹಾಗಲಕಾಯಿ ಚಿಪ್ಸ್, ಟೊಮೇಟೊ ಮೂರೂಕು<br>
+    ಸಿಹಿ ಆಲೂಗಡ್ಡೆ ಚಿಪ್ಸ್ (ಉಪ್ಪು / ಖಾರ), ಸಿಹಿ ಆಲೂಗಡ್ಡೆ ಕಡ್ಡಿ<br>
+    ಆಲೂಗಡ್ಡೆ ಚಿಪ್ಸ್ (ಉಪ್ಪು / ಖಾರ), ಈರುಳ್ಳಿ ಚಿಪ್ಸ್<br>
+    ಬಾಳೆಹಣ್ಣು ಚಿಪ್ಸ್ (ಹಳದಿ / ಕೆಂಪು / ಮೆಣಸು)<br>
+    ಸಾಮಾನ್ಯ ಮಿಶ್ರಣ, ವಿಶೇಷ ಮಿಶ್ರಣ (ಹಸಿರು)<br>
+    ಬಾಂಬೆ ಮಿಶ್ರಣ, ಬೆಳ್ಳುಳ್ಳಿ ಮಿಶ್ರಣ, ದಪ್ಪ ಮಿಶ್ರಣ<br>
+    ಖಾರ ಬೂಂದಿ, ಸೇವ್, ಮೊಟಾ ಸೇವ್<br>
+    ಹಸಿರು ಚಕ್ಲಿ, ಕೆಂಪು ಚಕ್ಲಿ<br>
+    ಚಕ್ಲಿ (ಉಪ್ಪು / ಖಾರ), ಸಿಂಗಲ್ / ಡಬಲ್ ರೋಲ್ ಚಕ್ಲಿ<br>
+    ಬೆಣ್ಣೆ ಮೂರೂಕು (ಉಪ್ಪು / ಖಾರ / ರಬ್ಬರ್ ಬ್ಯಾಂಡ್)<br>
+    ಮುಚ್ಚೋರೆ, ತೆಂಗೋಳ್<br>
+    ಅವಲಕ್ಕಿ (ಕೆಂಪು / ಹಸಿರು / ಬಿಳಿ)<br>
+    ಕೋಡುಬಳೆ (ದೊಡ್ಡದು / ಚಿಕ್ಕದು), ಕೆಂಪು ಕೋಡುಬಳೆ<br>
+    ಕಡಲೆ ಪುರಿ, ಕಾರ್ನ್ ಮಿಶ್ರಣ ಖಾರ<br>
+    ವೀಲ್ ಚಿಪ್ಸ್, ಬೋಟಿ, ಮದ್ದೂರು ವಡೆ<br>
+    ಹಲಸಿನಹಣ್ಣು ಚಿಪ್ಸ್ (ಉಪ್ಪು / ಖಾರ)<br>
+    ನಿಪ್ಪಟ್ಟು (ಸರಳ / ಈರುಳ್ಳಿ), ಓಂ ಪುಡಿ<br>
+    ತಮಿಳುನಾಡು ನಿಪ್ಪಟ್ಟು, ಪಾನಿ ಪೂರಿ, ಸಮೋಸಾ
+  </div>
+</div>
+</div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+             <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#happala">
+  ಹಪ್ಪಳ ಮತ್ತು ಸಂಡಿಗೆ
+</button>
+</h2>
+<div id="happala" class="accordion-collapse collapse">
+  <div class="accordion-body" id="happala-list">
+    ಬೆಳ್ಳುಳ್ಳಿ ಸಂಡಿಗೆ, ಈರುಳ್ಳಿ ಸಂಡಿಗೆ, ಸಬ್ಬಕ್ಕಿ ಸಂಡಿಗೆ<br>
+    ಬಾಲಕ (ಹೂರಣ / ಸರಳ)<br>
+    ಅಕ್ಕಿ ಹಪ್ಪಳ (ಈರುಳ್ಳಿ / ಖಾರ / ಆಲೂಗಡ್ಡೆ / ಟೊಮೇಟೊ / ಮಸಾಲಾ)<br>
+    ಅರಳು ಸಂಡಿಗೆ, ಅರಳು ಈರುಳ್ಳಿ ಸಂಡಿಗೆ<br>
+    ಚಕ್ಲಿ ಸಂಡಿಗೆ, ಸ್ಟಿಕ್ ಸಂಡಿಗೆ, ಪೇಣಿ ಸಂಡಿಗೆ<br>
+    ಹಲಸಿನಹಣ್ಣು ಹಪ್ಪಳ, ಉದ್ದಿನ ಹಪ್ಪಳ (ಉಪ್ಪು / ಖಾರ)<br>
+    ಹುರಳಿ ಹಪ್ಪಳ, ಕ್ಯಾರೆಟ್ ಹಪ್ಪಳ, ಬೀಟ್‌ರೂಟ್ ಹಪ್ಪಳ
+  </div>
+</div>
+
+          </div>
+
+         
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+             <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#kalugalu">
+  ಕಾಳುಗಳು
+</button>
+</h2>
+<div id="kalugalu" class="accordion-collapse collapse">
+  <div class="accordion-body" id="kalugalu-list">
+    ಹುರಿಗಾಳು (ಕೆಂಪು / ಹಸಿರು)<br>
+    ಕಡಲೆಕಾಯಿ (ಉಪ್ಪು / ಹಸಿರು / ಖಾರ / ಬೋಂಡಾ)<br>
+    ಕಾಂಗ್ರೆಸ್ (ಖಾರ / ಮೆಣಸು)<br>
+    ಅವರೆಕಾಳು, ಹಸರೇಕಾಳು (ಉಪ್ಪು / ಖಾರ)<br>
+    ಸಣ್ಣ ಕೊಡುಬಳೆ, ಕಾಬುಲಿ ಕಡಲೆ<br>
+    ಬಟಾಣಿ ಕಾಳು, ಹುರಿ ಕಡಲೆ<br>
+    ಮಿಕ್ಸ್ ಕಾಳು (ಸಂಗಮ), ಕಡಲೆಬೇಳೆ ಕಾಳು
+  </div>
+</div>
+
+          </div>
+
+        
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pudi">
+  ಪುಡಿ & ಹಿಟ್ಟು
+</button>
+</h2>
+<div id="pudi" class="accordion-collapse collapse">
+  <div class="accordion-body" id="pudi-list">
+    ಕಡಲೆಕಾಯಿ ಚಟ್ನಿ ಪುಡಿ<br>
+    ಹುರಿದ ಕಡಲೆ ಚಟ್ನಿ ಪುಡಿ<br>
+    ಬೆಳ್ಳುಳ್ಳಿ ಚಟ್ನಿ ಪುಡಿ<br>
+    3 ಮಿಕ್ಸ್ ಬೇಳೆ ಚಟ್ನಿ ಪುಡಿ<br>
+    ಪುಳಿಯೋಗರೆ ಪುಡಿ, ಪುಳಿಯೋಗರೆ ಗೊಜ್ಜು<br>
+    ಕರಿಬೇವು ಚಟ್ನಿ ಪುಡಿ<br>
+    ಮೆಂತ್ಯ ಚಟ್ನಿ ಪುಡಿ<br>
+    ಅಗಸೆ ಚಟ್ನಿ ಪುಡಿ<br><br>
+    ಚಕ್ಕುಲಿ ಹಿಟ್ಟು, ಕೊಡುಬಳೆ ಹಿಟ್ಟು<br>
+    ತೆಂಗೋಲ್ ಹಿಟ್ಟು, ಮುಚ್ಚೋರೆ ಹಿಟ್ಟು<br>
+    ದೋಸೆ ಹಿಟ್ಟು, ಖಾರ ದೋಸೆ ಹಿಟ್ಟು<br>
+    ಮೆಂತ್ಯ ದೋಸೆ ಹಿಟ್ಟು<br>
+    ಸಾರಿನ ಪುಡಿ, ಹುಳಿ ಪುಡಿ, ಬಾತಿನ ಪುಡಿ
+  </div>
+</div>
+
+          </div>
+
+        </div>
+
+        <div class="image-box mt-4">
+          <img src="images/menuufour.jpeg" class="menu-img">
+        </div>
+<br>
+
+        <div class="image-box mt-4">
+          <img src="images/menuuninee.jpeg" class="menu-img">
+        </div>
+        <br>
+     
+        <div class="image-box mt-4">
+          <img src="images/menuusix.jpeg" class="menu-img">
+        </div>
+<br>
+<div class="image-box mt-4">
+          <img src="images/menulast.jpeg" class="menu-img">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="menu-section">
+  <div class="container">
+ <h6 class="menu-subtitle">ಉಪ್ಪಿನಕಾಯಿ</h6>
+
+
+<div class="row mb-5 align-items-start">
+
+  
+  <div class="col-md-7">
+    <table class="table menu-table text-center">
+      <thead>
+        <tr>
+        <th>ಉಪ್ಪಿನಕಾಯಿ ವಿಧಗಳು</th>
+</tr>
+</thead>
+<tbody>
+  <tr><td>ಮಿಡಿ ಮಾವು</td></tr>
+  <tr><td>ಸಿಹಿ ನಿಂಬೆ ಉಪ್ಪಿನಕಾಯಿ</td></tr>
+  <tr><td>ಬೆಟ್ಟದ ನೆಲ್ಲಿಕಾಯಿ ಉಪ್ಪಿನಕಾಯಿ</td></tr>
+  <tr><td>ಹಾಗಲಕಾಯಿ ಉಪ್ಪಿನಕಾಯಿ</td></tr>
+  <tr><td>ಮಾವಿನಕಾಯಿ ಉಪ್ಪಿನಕಾಯಿ</td></tr>
+  <tr><td>ಮಿಶ್ರ ಉಪ್ಪಿನಕಾಯಿ</td></tr>
+  <tr><td>ಹುಣಸೆಕಾಯಿ ತೊಕ್ಕು</td></tr>
+  <tr><td>ಹೆರಳೆ ಉಪ್ಪಿನಕಾಯಿ</td></tr>
+  <tr><td>ಗೊಂಗೂರ ಉಪ್ಪಿನಕಾಯಿ</td></tr>
+  <tr><td>ನಿಂಬೆಕಾಯಿ ಉಪ್ಪಿನಕಾಯಿ</td></tr>
+  <tr><td>ಬೆಳ್ಳುಳ್ಳಿ ಗೊಜ್ಜು</td></tr>
+  <tr><td>ಆವಕಾಯಿ ಉಪ್ಪಿನಕಾಯಿ</td></tr>
+  <tr><td>ಮಾವಿನ ತೊಕ್ಕು</td></tr>
+  <tr><td>ಟೊಮ್ಯಾಟೊ ಗೊಜ್ಜು</td></tr>
+  <tr><td>ಅಮಟೇಕಾಯಿ ಉಪ್ಪಿನಕಾಯಿ</td></tr>
+</tbody>
+
+    </table>
+  </div>
+
+ 
+  <div class="col-md-5">
+
+    <div class="image-box mb-3">
+      <img src="images/picklesone.jpeg" class="menu-img">
+    </div>
+<br><br>
+    <div class="image-box mb-3">
+      <img src="images/picklesthree.jpeg" class="menu-img">
+    </div>
+<br><br>
+    <div class="image-box">
+      <img src="images/picklestwo.jpeg" class="menu-img">
+    </div>
+<br><br>
+      <div class="image-box mb-3">
+      <img src="images/picklessone.jpeg" class="menu-img">
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<section class="menu-section">
+  <div class="container">
+   <h6 class="menu-subtitle">ವಿಶೇಷ ಆರ್ಡರ್‌ಗಳು</h6>
+
+
+    <div class="row align-items-start mb-5">
+
+  <div class="col-md-5">
+
+    <div class="image-box mb-3">
+      <img src="images/sonine.jpeg" class="menu-img">
+    </div>
+
+    <div class="image-box mb-3">
+      <img src="images/sofour.jpeg" class="menu-img">
+    </div>
+
+    <div class="image-box">
+      <img src="images/soeight.jpeg" class="menu-img">
+    </div>
+<br>
+    <div class="image-box">
+      <img src="images/cartwopointfive.jpeg" class="menu-img">
+    </div>
+
+    <br>
+    <div class="image-box">
+      <img src="images/menuufive.jpeg" class="menu-img">
+    </div>
+
+  </div>
+
+  <div class="col-md-7">
+
+
+    <div class="accordion" id="festivalMenu">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#gopura">
+  ಗೋಪುರ ವಸ್ತುಗಳು
+</button>
+</h2>
+<div id="gopura" class="accordion-collapse collapse" data-bs-parent="#festivalMenu">
+  <div class="accordion-body">
+    ಎಳ್ಳು ಗೋಪುರ (ದೊಡ್ಡ / ಸಣ್ಣ)<br>
+    ಕಡಲೆಕಾಯಿ ಗೋಪುರ (ದೊಡ್ಡ / ಸಣ್ಣ)<br>
+    ಹುರಿದ ಕಡಲೆ ಗೋಪುರ (ದೊಡ್ಡ / ಸಣ್ಣ)<br>
+    ಕಡಲೆ ಪುರಿ ಗೋಪುರ (ದೊಡ್ಡ / ಸಣ್ಣ)<br>
+    ಅವಲಕ್ಕಿ ಪುರಿ ಗೋಪುರ (ದೊಡ್ಡ / ಸಣ್ಣ)<br>
+    ಚಕ್ಲಿ ಗೋಪುರ<br>
+    ಮನೋಹರ ಗೋಪುರ
+  </div>
+</div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unde">
+      ಉಂಡೆ / ಲಡ್ಡು ವಸ್ತುಗಳು
+    </button>
+  </h2>
+  <div id="unde" class="accordion-collapse collapse" data-bs-parent="#festivalMenu">
+    <div class="accordion-body">
+      ಎಳ್ಳು ಲಡ್ಡು (ದೊಡ್ಡ)<br>
+      ಕಡಲೆಕಾಯಿ ಉಂಡೆ (ದೊಡ್ಡ / ಸಣ್ಣ / ಪ್ಯಾಕೆಟ್)<br>
+      ಹುರಿದ ಕಡಲೆ ಉಂಡೆ (ದೊಡ್ಡ / ಸಣ್ಣ)<br>
+      ಕಡಲೆ ಪುರಿ ಉಂಡೆ (ದೊಡ್ಡ / ಸಣ್ಣ)<br>
+      ಅವಲಕ್ಕಿ ಪುರಿ ಉಂಡೆ (ದೊಡ್ಡ / ಸಣ್ಣ)<br>
+      ಎಳ್ಳು ಉಂಡೆ (ಸಣ್ಣ / ಕಪ್ಪು / ಬಿಳಿ ಪ್ಯಾಕೆಟ್)<br>
+      ಪುರಿ ಉಂಡೆ (ಸಣ್ಣ / 5 ಪ್ಯಾಕೆಟ್‌ನಲ್ಲಿ)<br>
+      ಕಡಲೆ ಉಂಡೆ ಪ್ಯಾಕೆಟ್<br>
+      ಪುಲ್ಲಂಗೈ ಉಂಡೆ<br>
+      ಮನೋಹರ ಉಂಡೆ
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#designs">
+      ಆನೆ & ಕಲಶ ವಿನ್ಯಾಸಗಳು
+    </button>
+  </h2>
+  <div id="designs" class="accordion-collapse collapse" data-bs-parent="#festivalMenu">
+    <div class="accordion-body">
+      ಪುರಿ ಆನೆ / ಕಲಶ<br>
+      ಹುರಿದ ಕಡಲೆ ಆನೆ / ಕಲಶ<br>
+      ಕಡಲೆಕಾಯಿ ಆನೆ / ಕಲಶ<br>
+      ಎಳ್ಳು ಆನೆ / ಕಲಶ<br>
+      ಕೊಬ್ಬರಿ ವಿನ್ಯಾಸ<br>
+      ಸಕ್ಕರೆ ಅಚ್ಚು
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chakli">
+      ಮುರುಕು & ಚಕ್ಲಿ ವಸ್ತುಗಳು
+    </button>
+  </h2>
+  <div id="chakli" class="accordion-collapse collapse" data-bs-parent="#festivalMenu">
+    <div class="accordion-body">
+      ಕೈ ಮುರುಕು (3R / 5R / 7R / 9R / 11R)<br>
+      ವಿನ್ಯಾಸ ಚಕ್ಲಿ<br>
+      ಬಾಗಣ (ಗ್ಯಾಪ್) ಚಕ್ಲಿ<br>
+      3R ಚಕ್ಲಿ (ಉಪ್ಪು / ಖಾರ / 6 ಪೀಸ್ ಪ್ಯಾಕೆಟ್)<br>
+      5R / 7R / 9R / 11R ಚಕ್ಲಿ / ಮುಚ್ಚೋರೆ / ತೆಂಗೋಲ್<br>
+      ಬೆಣ್ಣೆ ಮುರುಕು (ಉಪ್ಪು / ಖಾರ)
+    </div>
+  </div>
+</div>
+
+        
+<div class="image-box mt-4">
+  <img src="images/soten.jpeg" class="menu-img">
+</div>
+
+<div class="image-box mt-4">
+  <img src="images/soeleven.jpeg" class="menu-img">
+</div>
+<div class="image-box mt-4">
+  <img src="images/sotwo.jpeg" class="menu-img">
+</div>
+
+<div class="image-box mt-4">
+  <img src="images/sosix.jpeg" class="menu-img">
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+ <div class="container py-5 page-section" id="about">
+<h1 class="text-center mb-5 section-heading">
+  ಭಾರತೀಯ ಅಡುಗೆ ಪದ್ಧತಿ
+</h1>
+
+
+<div class="row align-items-start">
+  
+<div class="col-md-3 mb-3">
+  <div class="about-gallery-box">
+    <img src="images/aboutone.jpeg" class="about-gallery-img">
+  </div>
+</div>
+
+ <div class="col-md-3 mb-3">
+  <div class="about-gallery-box">
+    <img src="images/aboutfive.jpeg" class="about-gallery-img">
+  </div>
+</div>
+
+  <div class="col-md-3 mb-3">
+  <div class="about-gallery-box">
+    <img src="images/aboutthree.jpeg" class="about-gallery-img">
+  </div>
+</div>
+
+  <div class="col-md-3 mb-3">
+  <div class="about-gallery-box">
+    <img src="images/aboutseven.jpeg" class="about-gallery-img">
+  </div>
+</div>
+
+
+</div>
+
+<div class="row mt-3">
+  <div class="col-12">
+    <div class="description-box">
+      <h4>ನಮ್ಮ ಬಗ್ಗೆ</h4>
+
+      <p>
+   ಅೈತಾಳ ಹೊಳಿಗೆ ಮನೆ ಒಂದು ಹೊಳಿಗೆ ಹಾಗೂ ಸೈಡ್ ಪದಾರ್ಥಗಳ ಅಂಗಡಿಯಾಗಿದೆ. ಇಲ್ಲಿ ಲಭ್ಯವಿಲ್ಲದ ಯಾವುದಾದರೂ ಪದಾರ್ಥ ಬೇಕಿದ್ದರೆ ನಮ್ಮನ್ನು ಕೇಳಿ! ಹೊಳಿಗೆ, ಲಡ್ಡು, ಜಾಮೂನ್, ಚಿಕ್ಕಿ, ಹಲ್ವಾ, ಬಾದಾಮಿ ಪುರಿ ಮುಂತಾದ ಸಿಹಿ ಪದಾರ್ಥಗಳಿಂದ ಹಿಡಿದು ಚಕ್ಲಿ, ನಿಪ್ಪಟ್, ಚಿಪ್ಸ್, ಧಾನ್ಯಗಳು ಮುಂತಾದ ಖಾರ ಪದಾರ್ಥಗಳು ಹಾಗೂ ವಿವಿಧ ವಿಧದ ಉಪ್ಪಿನಕಾಯಿಗಳು ಇಲ್ಲಿ ಲಭ್ಯವಿವೆ. ಜೊತೆಗೆ ಸಕ್ಕರೆ ಅಚ್ಚು, ಕೊಬ್ರಿ ವಿನ್ಯಾಸಗಳು ಮುಂತಾದ ಹಬ್ಬದ ವಿಶೇಷ ಪದಾರ್ಥಗಳನ್ನೂ ನಾವು ಮಾರಾಟ ಮಾಡುತ್ತೇವೆ.
+</p>
+
+    </div>
+  </div>
+</div>
+
+  <div class="section-divider"></div>
+<br>
+  
+  <h2 class="text-center mb-5">ನಿಯಮಿತ ಗ್ರಾಹಕರ ವಿಮರ್ಶೆಗಳು</h2>
+
+<div class="row g-5">
+  <div class="col-md-6">
+    <div class="quote-card">
+      <p>
+        ಹೊಳಿಗೆಗಾಗಿ ಅತ್ಯುತ್ತಮ ಸ್ಥಳ. ಕಳೆದ 6 ವರ್ಷಗಳಿಂದ ನಾನು ಇಲ್ಲಿ ಹೊಳಿಗೆ ಖರೀದಿಸುತ್ತಿದ್ದೇನೆ ಮತ್ತು ಯಾವಾಗಲೂ ತುಂಬಾ ಇಷ್ಟವಾಗಿದೆ. ನಾವು ಅಂಗಡಿಯಿಂದ ತುಂಬಾ ದೂರ ವಾಸಿಸುತ್ತಿದ್ದರೂ, ನಾನು ಕರೆ ಮಾಡಿ ಆರ್ಡರ್ ಮಾಡಿದಾಗ ಅವರು ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ ತಯಾರಿಸಿ ಸದಾ ಅತ್ಯುತ್ತಮ ಸೇವೆ ನೀಡಿದ್ದಾರೆ. ಬಾದಾಮಿ ಹೊಳಿಗೆ ಇವರ ವಿಶೇಷತೆಯೊಂದಾಗಿದೆ.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="quote-card">
+      <p>
+        ನಾನು ಹಲವು ವರ್ಷಗಳಿಂದ ಈ ಸ್ಥಳಕ್ಕೆ ಬರುತ್ತಿದ್ದೇನೆ. ಸ್ವಚ್ಛತೆ ಚೆನ್ನಾಗಿ ಕಾಪಾಡಲಾಗಿದೆ. ಬಿಸಿ ಒಬ್ಬಟ್ಟು ತಯಾರಿಸಲು ತೆಗೆದುಕೊಳ್ಳುವ ಸಮಯ ತುಂಬಾ ಕಡಿಮೆ. ಹಲವಾರು ವಿಧದ ಒಬ್ಬಟ್ಟುಗಳನ್ನು ತಯಾರಿಸುತ್ತಾರೆ, ಆದರೆ ನಮ್ಮ ಮೆಚ್ಚಿನವು ಎಂದಿಗೂ ಬೆಳೆ ಒಬ್ಬಟ್ಟು ಮತ್ತು ಕಾಯಿ ಒಬ್ಬಟ್ಟು — ರುಚಿ ಅತ್ಯುತ್ತಮವಾಗಿದೆ. ಖಂಡಿತವಾಗಿ ಶಿಫಾರಸು ಮಾಡುತ್ತೇನೆ.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="quote-card">
+      <p>
+        ವಿವಿಧ ವಿಧದ ಹೊಳಿಗೆಗಳಿಗೆ ಸಮರ್ಪಿತವಾದ ಸ್ಥಳ. ಹೊಳಿಗೆ ಪ್ರಿಯರಿಗೆ ಖಂಡಿತ ಭೇಟಿ ನೀಡಬೇಕಾದ ಸ್ಥಳ. ಜೊತೆಗೆ ವಿವಿಧ ಸೈಡ್ ಪದಾರ್ಥಗಳು, ಉಪ್ಪಿನಕಾಯಿ, ಹಪ್ಪಳಗಳು ಇತ್ಯಾದಿಗಳೂ ಲಭ್ಯವಿವೆ. ಈ ಸ್ಥಳದಿಂದ ತುಂಬಾ ಸಂತೋಷವಾಗಿದೆ!
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="quote-card">
+      <p>
+        ವಿವಿಧ ವಿಧದ ಹೊಳಿಗೆಗಳನ್ನು ಸವಿಯಲು ಅತ್ಯುತ್ತಮ ಸ್ಥಳ. ನಾನು ಬೆಂಗಳೂರಿನ ನಿವಾಸಿ ಅಲ್ಲ, ಆದರೆ ನಾನು ಬೆಂಗಳೂರಿಗೆ ಪ್ರತಿ ಬಾರಿ ಬಂದಾಗ ಇಲ್ಲಿಗೆ ಭೇಟಿ ನೀಡಿ ಪ್ರತಿಯೊಂದು ವಿಧದ ಹೊಳಿಗೆಯನ್ನು ಕನಿಷ್ಠ ಒಂದು ಬಾರಿ ಸವಿಯುತ್ತೇನೆ.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center py-5 page-section" id="contact">
+
+  <h1 class="mb-5">ಸಂಪರ್ಕ ಮಾಹಿತಿ</h1>
+
+  <div class="content-section">
+    <div class="section-title">ನಮ್ಮನ್ನು ಭೇಟಿ ಮಾಡಿ</div>
+
+    <p class="info-text">
+  #318, 1ನೇ ಕ್ರಾಸ್, ಸಿ.ಟಿ. ಬೆಡ್, ಎಸ್‌ಎಸ್‌ಎಂ ಶಾಲೆಯ ಬಳಿ, ತ್ಯಾಗರಾಜನಗರ,<br>
+  ಬೆಂಗಳೂರು, ಕರ್ನಾಟಕ – 560028
+</p>
+
+  </div>
+
+ 
+
+
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6316685501974!2d77.5640675!3d12.9313788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1587d9808577%3A0x7143de9a898d8dd!2sAITHAL%20Holige%20Mane!5e0!3m2!1sen!2sin!4v1771084631852!5m2!1sen!2sin"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<div class="text-center mt-3">
+  <a href="https://mappls.com/3lv79j" 
+     target="_blank"
+     class="btn btn-success px-4">
+     📍 Mappls ನಲ್ಲಿ ತೆರೆಯಿರಿ
+
+  </a>
+</div>
+
+<br>
+  <div class="content-section">
+    <div class="section-title">ಮಾಹಿತಿಗಾಗಿ ಕರೆ ಮಾಡಿ</div>
+    <p class="info-text">
+      +91 9341227889<br>
+      +91 8884977889<br>
+      +91 8884677889
+    </p>
+  </div>
+<div class="content-section text-center">
+  <div class="section-title">ಸಾಮಾಜಿಕ ಜಾಲತಾಣಗಳು</div>
+
+
+  <div class="text-center mt-3">
+
+ <div class="d-flex justify-content-center align-items-center gap-4 mt-3">
+
+  <a href="https://instagram.com/aithalholigemane"
+     target="_blank"
+     class="text-decoration-none">
+    <i class="bi bi-instagram fs-3"></i>
+  </a>
+
+
+  <div class="dropdown">
+    <button class="btn p-0 border-0"
+            type="button"
+            data-bs-toggle="dropdown"
+            data-bs-display="static">
+      <i class="bi bi-whatsapp fs-3 text-success"></i>
+    </button>
+
+    <ul class="dropdown-menu text-center">
+      <li>
+        <a class="dropdown-item"
+           href="https://wa.me/9341227889"
+           target="_blank">
+         ಮಾಲೀಕರು
+
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item"
+           href="https://wa.me/8884977889"
+           target="_blank">
+         ವ್ಯವಸ್ಥಾಪಕರು
+
+        </a>
+      </li>
+        <a class="dropdown-item"
+           href="https://wa.me/8884677889"
+           target="_blank">
+         ಮಾಲೀಕರ ಪುತ್ರ
+
+        </a>
+    </ul>
+  </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  
+<footer class="page-section py-5">
+
+  <div class="container">
+
+   <div class="row align-items-center">
+
+  <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+    <div class="text-center text-md-start">
+      <img src="images/owner.jpeg" 
+           class="img-fluid rounded-circle shadow"
+           style="width:220px; height:220px; object-fit:cover;">
+
+      <p class="mt-3 fw-bold" 
+         style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+        ಎನ್. ರಾಘವೇಂದ್ರ ಐತಾಳ
+
+      </p>
+   
+  </div>
+   </div>
+
+  <div class="col-md-6 text-center text-md-end">
+    <img src="images/businesscard.jpeg" 
+         alt="Business Card" 
+         class="img-fluid rounded shadow"
+         style="max-width:300px;">
+          <p class="mt-3 fw-bold" 
+         style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+       ವ್ಯವಹಾರ ಕಾರ್ಡ್
+
+      </p>
+  </div>
+  
+
+
+
+
+   <div class="footer-bottom">
+   <hr class="my-4"
+       style="height:3px; background-color:#f1d27a; border:none;">
+
+   <div class="text-center mt-3">
+      <span style="color:#f8e8c8;">
+       © 2026 ಅೈತಾಳ ಹೊಳಿಗೆ ಮನೆ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.
+
+      </span>
+   </div>
+</div>
+
+</div>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<div class="modal fade" id="adminLoginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">ನಿರ್ವಾಹಕರ ಲಾಗಿನ್</h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="adminLoginForm">
+          <div class="mb-3">
+         <label>ಬಳಕೆದಾರ ಹೆಸರು</label>
+<input type="text" class="form-control" id="adminUsername" required>
+</div>
+<div class="mb-3">
+  <label>ಪಾಸ್ವರ್ಡ್</label>
+
+            <input type="password" class="form-control" id="adminPassword" required>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">ಲಾಗಿನ್</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="adminPanelModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">ಮೆನು ಐಟಂ ಸೇರಿಸಿ</h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="addItemForm">
+          <div class="mb-3">
+            <label>ವರ್ಗ</label>
+  <select class="form-control" id="itemCategory">
+    <option value="Sweets">ಮಿಠಾಯಿ</option>
+<option value="Khara">ಖಾರ</option>
+<option value="Happala & Sandige">ಹಪ್ಪಳ & ಸಂಡಿಗೆ</option>
+<option value="Kalugalu">ಕಾಳುಗಳು</option>
+<option value="Pudi & Hittu">ಪುಡಿ & ಹಿಟ್ಟು</option>
+
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label>ಐಟಂ ಹೆಸರು</label>
+<input type="text" class="form-control" id="itemName" required>
+</div>
+
+<button type="submit" class="btn btn-success w-100">ಐಟಂ ಸೇರಿಸಿ</button>
+</form>
+<h5>ಇದ್ದಿರುವ ಐಟಂಗಳು</h5>
+
+<div id="adminItemsList"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+document.getElementById("adminLoginForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const username = document.getElementById("adminUsername").value;
+  const password = document.getElementById("adminPassword").value;
+
+  
+  const correctUser = "raghavendraaithal";
+  const correctPass = "Avin@sh09012011";
+
+  if(username === correctUser && password === correctPass){
+      var loginModal = bootstrap.Modal.getInstance(document.getElementById('adminLoginModal'));
+      loginModal.hide();
+
+      var panelModal = new bootstrap.Modal(document.getElementById('adminPanelModal'));
+      panelModal.show();
+        loadAdminItems();
+  } else {
+      alert("ಅಮಾನ್ಯ ಪ್ರವೇಶ ವಿವರಗಳು");
+
+  }
+});
+
+
+function loadItems(category, elementId){
+  fetch("fetch_items.php?category=" + encodeURIComponent(category) + "&lang=kn")
+
+    .then(response => response.text())
+    .then(data => {
+      if(data.trim() !== ""){
+        document.getElementById(elementId).innerHTML += "<br>" + data;
+      }
+    });
+}
+
+
+loadItems("Sweets", "sweets-list");
+loadItems("Khara", "khara-list");
+loadItems("Happala & Sandige", "happala-list");
+loadItems("Kalugalu", "kalugalu-list");
+loadItems("Pudi & Hittu", "pudi-list");
+
+
+
+document.getElementById("addItemForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const category = document.getElementById("itemCategory").value;
+  const itemName = document.getElementById("itemName").value;
+
+  fetch("add_item.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: "category=" + encodeURIComponent(category) +
+          "&item_name=" + encodeURIComponent(itemName)
+  })
+  .then(response => response.text())
+  .then(data => {
+
+    if(data.trim() === "success"){
+
+     
+    if(category === "Sweets"){
+  document.getElementById("sweets-list").innerHTML += "<br>" + itemName;
+}
+
+if(category === "Khara"){
+  document.getElementById("khara-list").innerHTML += "<br>" + itemName;
+}
+
+if(category === "Happala & Sandige"){
+  document.getElementById("happala-list").innerHTML += "<br>" + itemName;
+}
+
+if(category === "Kalugalu"){
+  document.getElementById("kalugalu-list").innerHTML += "<br>" + itemName;
+}
+
+if(category === "Pudi & Hittu"){
+  document.getElementById("pudi-list").innerHTML += "<br>" + itemName;
+}
+
+alert("ಐಟಂ ಯಶಸ್ವಿಯಾಗಿ ಸೇರಿಸಲಾಗಿದೆ!");
+
+document.getElementById("itemName").value = "";
+
+} else {
+  alert("ಐಟಂ ಸೇರಿಸುವಲ್ಲಿ ದೋಷವಾಗಿದೆ");
+  console.log(data);
+}
+
+  });
+});
+
+
+
+
+function loadAdminItems(){
+    fetch("fetch_admin_items.php")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("adminItemsList").innerHTML = data;
+    });
+}
+
+function deleteItem(id){
+    if(confirm("ಈ ಐಟಂ ಅನ್ನು ಅಳಿಸುವುದೇ?")){
+        fetch("delete_items.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "id=" + id
+        })
+        .then(response => response.text())
+        .then(data => {
+            if(data.trim() === "success"){
+                loadAdminItems(); 
+            }
+        });
+    }
+}
+
+</script>
+
+</body>
+</html>
+
